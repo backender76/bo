@@ -2,6 +2,11 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {},
-  "devDependencies": {},
-  "scripts": {}
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  },
+  "scripts": {
+    "server-dev": "node_modules/typescript/bin/tsc -w",
+    "server-dist": "node_modules/typescript/bin/tsc"
+  }
 }
