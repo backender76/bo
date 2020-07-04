@@ -5,5 +5,8 @@
     "lib": ["es2020"],
     "module": "commonjs",
     "target": "es2019"
-  }
+  },
+  "exclude": [
+    "src/client"
+  ]
 }
