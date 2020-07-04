@@ -5,7 +5,7 @@ const port: number = 3700;
 
 const app = express();
 
-app.use(router);
+app.use('/api', router);
 
 app.listen(port, () => {
   console.log(`server listening on port ${port}`);

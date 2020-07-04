@@ -9,3 +9,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// call api example
+fetch('/api').then(res => res.json()).then(res => console.log(res));
