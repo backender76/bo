@@ -1,12 +1,16 @@
 {
   "private": true,
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
+    "@types/express": "^4.17.6",
     "typescript": "^3.9.6"
   },
   "scripts": {
-    "server-dev": "node_modules/typescript/bin/tsc -w",
-    "server-dist": "node_modules/typescript/bin/tsc"
+    "server-run": "node dist/index.js",
+    "server-dev-build": "node_modules/typescript/bin/tsc -w",
+    "server-dist-build": "node_modules/typescript/bin/tsc"
   }
 }
