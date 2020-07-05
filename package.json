@@ -1,30 +1,21 @@
 {
   "private": true,
   "version": "0.0.0",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
-    "@types/express": "^4.17.6",
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
     "concurrently": "^5.2.0",
-    "eslint": "^7.4.0",
-    "eslint-config-airbnb-typescript": "^8.0.2",
-    "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "typescript": "^3.9.6"
+    "pretty-quick": "^2.0.1"
   },
   "scripts": {
     "dev": "node_modules/.bin/concurrently \"npm run client-dev\" \"npm run server-dev-build\" \"npm run server-run-watch\"",
     "server-run": "node dist/index.js",
     "server-run-watch": "node_modules/.bin/nodemon dist/index.js",
-    "server-dev-build": "node_modules/typescript/bin/tsc -w",
-    "server-dist-build": "node_modules/typescript/bin/tsc",
-    "client-dev": "cd src/client && npm run start",
-    "eslint-server": "node_modules/.bin/eslint ./src"
+    "server-dev-build": "cd server && node_modules/typescript/bin/tsc -w",
+    "server-dist-build": "cd server && node_modules/typescript/bin/tsc",
+    "client-dev": "cd client && npm run start",
+    "eslint-server": "cd server && node_modules/.bin/eslint src"
   },
   "husky": {
     "hooks": {
