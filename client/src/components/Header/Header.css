@@ -1,0 +1,20 @@
+.App-Header {
+  display: flex;
+  color: whitesmoke;
+}
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.trigger:hover {
+  color: #1890ff;
+}
+.App-Header > .ant-breadcrumb {
+  margin-top: 18px !important;
+}
+.App-Header > .ant-breadcrumb span {
+  color: whitesmoke;
+}
