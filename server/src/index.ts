@@ -2,6 +2,7 @@ import * as dotenv from 'dotenv'
 import * as express from 'express'
 import router from './routers/index'
 import * as mongoose from 'mongoose'
+import * as bodyParser from 'body-parser'
 
 dotenv.config()
 
@@ -20,6 +21,9 @@ mongoose
   })
 
 const app = express()
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 
 app.use('/api', router)
 
