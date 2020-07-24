@@ -5,6 +5,7 @@ import {Header} from './components/Header/Header'
 import {MainMenu} from './components/MainMenu/MainMenu'
 import {Route, Switch /*, Redirect*/} from 'react-router-dom'
 import {Logotype} from './components/Logotype/Logotype'
+import {LoginPage} from './components/routes/LoginPage'
 
 const {Sider, Content, Footer} = Layout
 
@@ -21,7 +22,7 @@ function App() {
         <Header collapse={collapsed} onClick={() => setCollapse(!collapsed)} />
         <Content className="App-content">
           <Switch>
-            <Route path="/login" render={() => <h1>Page login</h1>} />
+            <Route path="/login" render={() => <LoginPage />} />
             <Route path="/" render={() => <h1>Home page</h1>} />
             <Route path="/" render={() => <h1>Page not found</h1>} />
           </Switch>
