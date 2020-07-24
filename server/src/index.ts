@@ -11,17 +11,20 @@ if (process.env.NODE_ENV !== 'production') {
 import router from './routers/index'
 
 const PORT: number = Number(process.env.API_PORT)
-const MONGO_URL: string = process.env.DB_URL
+const DB_URL: string = process.env.DB_URL
 
 mongoose
-  .connect(MONGO_URL, {
+  .connect(DB_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log('mongoose connected to', MONGO_URL)
+    console.log('mongoose connected to', DB_URL)
+  })
+  .catch((e) => {
+    console.log('mongo error:', e)
   })
 
 const app = express()
